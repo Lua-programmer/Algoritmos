@@ -1,12 +1,12 @@
 package org.example.cap_1
 
-fun buscaBinaria(array: IntArray, valor: Int): Int {
+fun List<Int>.buscaBinaria(valor: Int): Int {
     var inicio = 0
-    var fim = array.size - 1
+    var fim = size - 1
 
     while (inicio <= fim) {
         val meio = (inicio + fim) / 2
-        val valorMeio = array[meio]
+        val valorMeio = get(meio)
 
         if (valorMeio == valor) {
             return meio
@@ -20,11 +20,12 @@ fun buscaBinaria(array: IntArray, valor: Int): Int {
     return -1
 }
 
+
 fun cap1() {
     println("Capítulo 1")
     println("Busca Binária")
-    val array = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    val array = listOf(1,3,5,7,9)
     val valor = 5
-    val posicao = buscaBinaria(array, valor)
+    val posicao = array.buscaBinaria(valor)
     println("O valor $valor está na posição $posicao")
 }
