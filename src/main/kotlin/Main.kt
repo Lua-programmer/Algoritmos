@@ -7,5 +7,5 @@ fun main() {
     //cap_1
     cap1()
     //cap_2
-//    cap2()
+    cap2()
 }
